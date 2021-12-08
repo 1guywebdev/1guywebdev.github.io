@@ -549,3 +549,9 @@ img:hover, .caption:hover {
   font-size: 150%;
   animation: none;
 }
+.footer {
+  background-color: #2e291d;
+  font-size: 0.8rem;
+  display: block;
+  text-align: center;
+}
