@@ -104,7 +104,6 @@ background: linear-gradient(45deg, #1565C0, #b92b27);
   box-shadow: 0px 0px 10px #faebd794;
   color: #2e291d;
   background-color: #faebd7;
-  font-size: 1.3rem;
 }
 .nav-links:hover .icon {
   opacity: 1;
