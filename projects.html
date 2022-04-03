@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>About | 1-Guy WebDev</title>
+    <meta name="1-Guy WebDev" content="Front-End Webdeveloper, web designer">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/21371eed37.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/jpg" sizes="32x32" href="img/1gwd-logo_clear_bg_500px.png">
+    <link rel="stylesheet" href="css/main.css">
+    </head>
+  <body>
+    <header>
+      <div class="menu-btn">
+        <span class="menu-btn__burger"></span>
+      </div>
+      <nav class="nav">
+        <ul class="menu-nav">
+          <li class="menu-nav__item">
+            <a href="index.html" class="menu-nav__link">
+              Home
+            </a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="about.html" class="menu-nav__link">
+              About Me
+            </a>
+          </li>
+          <li class="menu-nav__item active">
+            <a href="projects.html" class="menu-nav__link">
+              My Projects
+            </a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="contact.html" class="menu-nav__link">
+              Contact Me
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main-projects">
+      <section class="social">
+        <a href="https://www.facebook.com/1guywebdev" target="_blank">Facebook
+          <i class="fab fa-facebook fa-2x" title="Follow me on Facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/1guywebdev/" target="_blank">Instagram
+          <i class="fab fa-instagram fa-2x" title="Follow me on Instagram"></i>
+        </a>
+        <a href="https://wa.me/+27682592605" target="_blank">WhatsApp
+          <i class="fab fa-whatsapp fa-2x" title="Chat with me on WhatsApp"></i>
+        </a>
+      </section>
+      
+      <section class="container-fluid text-center projects"> 
+        <h1 class="projects__heading">My <span class="projects__span">Projects</span></h1>
+        <div class="row projects__cards">
+          
+          <div class="col-md-6 projects__card">
+            <div class="card__flip" onmouseenter="flip(event)" onmouseleave="flip(event)">
+              <div class="projects__img__div card__front">
+                <img class="projects__img" src="img/project_esl4workplace.png" alt="ESL4 Work Place">
+              </div>
+              <div class="container projects__btns card__back">
+                <a href="https://www.esl4worklace.com/" target="_blank">
+                  <i class="fa fa-globe">&nbsp;Website</i>
+                </a>
+              </div>
+            </div>
+            <a href="https://www.esl4worklace.com/" target="_blank">
+              <p>ESL4 Workplace</p>
+            </a>
+          </div>
+
+          <div class="col-md-6 projects__card">
+            <div class="card__flip" onmouseenter="flip(event)" onmouseleave="flip(event)">
+              <div class="projects__img__div card__front">
+                <img class="projects__img" src="img/project_bitcomputers.png" alt="BiT Computers">
+              </div>
+              <div class="container projects__btns card__back">
+                <a href="https://bitcomputers.co.za/" target="_blank">
+                  <i class="fa fa-globe">&nbsp;Website</i>
+                </a>
+              </div>
+            </div>
+            <a href="https://bitcomputers.co.za/" target="_blank">
+              <p>BiT Computers</p>
+            </a>
+          </div>
+
+          <div class="col-md-6 projects__card">
+            <div class="card__flip" onmouseenter="flip(event)" onmouseleave="flip(event)">
+              <div class="projects__img__div card__front">
+                <img class="projects__img" src="img/FEM_nft_card.png" alt="FEM NFT Card">
+              </div>
+              <div class="container projects__btns card__back">
+                <a href="https://1guywebdev.github.io/fem-NFT-preview-card/" target="_blank">
+                  <i class="fa fa-globe">&nbsp;Website</i>
+                </a>
+                <a href="https://github.com/1guywebdev/fem-NFT-preview-card" target="_blank">
+                  <i class="fa fa-github">&nbsp;Github</i>
+                </a>
+              </div>
+            </div>
+            <a href="https://1guywebdev.github.io/fem-NFT-preview-card/" target="_blank">
+              <p>FEM NFT Card</p>
+            </a>
+          </div>
+
+          <div class="col-md-6 projects__card">
+            <div class="card__flip" onmouseenter="flip(event)" onmouseleave="flip(event)">
+              <div class="projects__img__div card__front">
+                <img class="projects__img" src="img/FEM_stats_preview.png" alt="FEM Stats Preview Card">
+              </div>
+              <div class="container projects__btns card__back">
+                <a href="https://1guywebdev.github.io/fem-stats-preview/" target="_blank">
+                  <i class="fa fa-globe">&nbsp;Website</i>
+                </a>
+                <a href="https://github.com/1guywebdev/fem-stats-preview" target="_blank">
+                  <i class="fa fa-github">&nbsp;Github</i>
+                </a>
+              </div>
+            </div>
+            <a href="https://1guywebdev.github.io/fem-stats-preview/" target="_blank">
+              <p>FEM Stats Preview Card</p>
+            </a>
+          </div>
+
+          <div class="col-md-6 projects__card">
+            <div class="card__flip" onmouseenter="flip(event)" onmouseleave="flip(event)">
+              <div class="projects__img__div card__front">
+                <img class="projects__img" src="img/FEM_profile_card.png" alt="FEM Profile Card">
+              </div>
+              <div class="container projects__btns card__back">
+                <a href="https://1guywebdev.github.io/fem-profile-card/" target="_blank">
+                  <i class="fa fa-globe">&nbsp;Website</i>
+                </a>
+                <a href="https://github.com/1guywebdev/fem-profile-card" target="_blank">
+                  <i class="fa fa-github">&nbsp;Github</i>
+                </a>
+              </div>
+            </div>
+            <a href="https://1guywebdev.github.io/fem-profile-card/" target="_blank">
+              <p>FEM Profile Card</p>
+            </a>
+          </div>
+
+          <div class="col-md-6 projects__card">
+            <div class="card__flip" onmouseenter="flip(event)" onmouseleave="flip(event)">
+              <div class="projects__img__div card__front">
+                <img class="projects__img" src="img/FEM_4card_preview.png" alt="FEM 4-card Feature">
+              </div>
+              <div class="container projects__btns card__back">
+                <a href="https://1guywebdev.github.io/fem-4card-feature/" target="_blank">
+                  <i class="fa fa-globe">&nbsp;Website</i>
+                </a>
+                <a href="https://github.com/1guywebdev/fem-4card-feature" target="_blank">
+                  <i class="fa fa-github">&nbsp;Github</i>
+                </a>
+              </div>
+            </div>
+            <a href="https://1guywebdev.github.io/fem-4card-feature/" target="_blank">
+              <p>FEM 4-card Feature</p>
+            </a>
+          </div>
+
+        </div>
+      </section> 
+    </main>
+
+    <footer class="footer__projects">&copy;Copyright 2022
+      <img src="img/1gwd-logo_clear_bg_500px.png" width="32px" alt="">
+    </footer>
+    <script src="js/main.js" async defer></script>
+    <script src="js/card-flip.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
