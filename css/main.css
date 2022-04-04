@@ -134,7 +134,6 @@
   opacity: 0.98;
   visibility: hidden;
   margin-left: 20vw;
-  background-color: #161616;
   z-index: 1;
   transition: all 500ms ease-in-out;
 }
@@ -142,6 +141,7 @@
   visibility: visible;
 }
 .nav .menu-nav {
+  background-color: rgba(22, 22, 22, 0.9);
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -150,13 +150,13 @@
   overflow: hidden;
   list-style-type: none;
   padding-right: 3rem;
-  padding-top: 3rem;
-  transform: translateX(100%);
-  opacity: 0;
+  padding-top: 0rem;
+  transform: translateX(100vw);
   transition: all 500ms ease-in-out;
+  width: 80vw;
 }
 .nav .menu-nav.open {
-  transform: translateY(0);
+  transform: translateX(0);
   opacity: 1;
 }
 .nav .menu-nav__item {
@@ -181,10 +181,6 @@
   font-weight: 300;
   text-align: right;
   margin-right: 0;
-  transition: all 500ms ease-in-out;
-}
-.nav .menu-nav__link:hover {
-  color: #4f9225;
 }
 
 .menu-nav__item:nth-child(1) {
@@ -205,7 +201,7 @@
 
 .about {
   height: 100vh;
-  padding-top: 10vh;
+  padding-top: 5vh;
   overflow: hidden;
   right: 2rem;
   background: linear-gradient(45deg, #161616, rgba(22, 22, 22, 0.9), rgba(22, 22, 22, 0.8), rgba(22, 22, 22, 0.9), #161616), url("../img/about_me_bg_mobile.jpg");
@@ -240,7 +236,7 @@
 .about__paragraph {
   color: #dfdfdf;
   font-family: "Ubuntu", Arial, sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
   display: flex;
   flex-direction: column;
   line-height: 2rem;
@@ -273,8 +269,34 @@
 }
 
 @media screen and (min-width: 768px) {
+  .menu-btn {
+    visibility: hidden;
+  }
+
+  .nav {
+    visibility: visible;
+  }
+  .nav .menu-nav {
+    display: block;
+    transform: translateY(0);
+    height: 100%;
+    background: transparent;
+    text-align: right;
+  }
+  .nav .menu-nav__item {
+    display: inline;
+    padding-right: 1.5rem;
+  }
+  .nav .menu-nav__link {
+    font-size: 1.5rem;
+    transition: all 300ms ease-in-out;
+  }
+  .nav .menu-nav__link:hover {
+    color: #4f9225;
+  }
+
   .about {
-    padding-top: 0vh;
+    padding-top: 10vh;
     background: linear-gradient(to right, rgba(14, 6, 1, 0.9), rgba(14, 6, 1, 0.7), rgba(14, 6, 1, 0.6), rgba(14, 6, 1, 0.7), rgba(14, 6, 1, 0.9)), url("../img/about_me_bg_mobile.jpg");
     background-size: cover;
   }
@@ -298,11 +320,8 @@
   }
 }
 @media screen and (min-width: 1024px) {
-  .menu-nav__link {
-    font-size: 2rem;
-  }
-
   .home {
+    padding-top: 15vh;
     background: linear-gradient(to right, rgba(14, 6, 1, 0.9), rgba(14, 6, 1, 0.5), rgba(14, 6, 1, 0.2), rgba(14, 6, 1, 0.2), rgba(14, 6, 1, 0.5), rgba(14, 6, 1, 0.9)), url("../img/pexels-life-of-pix-7613.jpg");
     background-size: cover;
     padding-top: 3rem;
@@ -339,6 +358,7 @@
   }
 
   .about {
+    padding-top: 10vh;
     background: linear-gradient(to right, #161616, rgba(22, 22, 22, 0.9), rgba(22, 22, 22, 0.8), rgba(22, 22, 22, 0.9), #161616), url("../img/about_me_bg_desktop_md.jpg");
     background-size: cover;
   }
@@ -359,6 +379,19 @@
     margin-bottom: 1rem;
   }
 
+  .projects {
+    background: linear-gradient(to right, #161616, rgba(22, 22, 22, 0.9), rgba(22, 22, 22, 0.8), rgba(22, 22, 22, 0.9), #161616), url("../img/about_me_bg_desktop_md.jpg");
+    background-size: cover;
+  }
+  .projects__heading {
+    font-family: "Fredoka", Arial, sans-serif;
+    font-weight: 400;
+    width: 40vw;
+    margin-left: 10em;
+    font-size: 3rem;
+    padding-top: 1vh;
+  }
+
   main .social a::before {
     width: 230px !important;
   }
@@ -368,12 +401,16 @@
 
   .projects__cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 3em;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
   }
 
   .footer__projects {
     right: 0 !important;
+  }
+
+  .contact__form {
+    width: 60% !important;
   }
 }
 @media screen and (min-width: 1600px) {
@@ -439,7 +476,7 @@
 }
 .projects {
   height: 100%;
-  padding-top: 10vh;
+  padding-top: 15vh;
   padding-bottom: 5rem;
   overflow: hidden;
   right: 2rem;
@@ -575,6 +612,111 @@
   bottom: 10%;
 }
 
+.card1, .card2, .card3, .card4, .card5, .card6 {
+  animation: cards 5s ease-out 1s both;
+}
+
+@keyframes cards {
+  0% {
+    transform: translateX(-200vw);
+  }
+  100% {
+    transform: translateyX(0);
+  }
+}
+.footer__projects {
+  position: fixed;
+}
+
+.contact {
+  height: 100%;
+  padding-top: 15vh;
+  overflow: hidden;
+  right: 2rem;
+  background: linear-gradient(to right, rgba(22, 22, 22, 0.8), rgba(22, 22, 22, 0.6), rgba(22, 22, 22, 0.4), rgba(22, 22, 22, 0.6), rgba(22, 22, 22, 0.8)), url("../img/contat_bg.jpg");
+  background-size: cover;
+  background-repeat: repeat;
+}
+.contact__heading {
+  font-family: "Fredoka", Arial, sans-serif;
+  font-weight: 400;
+  width: 40vw;
+  font-size: 2.5rem;
+  margin-left: 50vw;
+  animation: heading 2s ease-out 0.2s both;
+  padding-bottom: 1rem;
+  text-align: right;
+  color: #c5cbe3;
+  display: flex;
+  flex-direction: column;
+}
+@keyframes heading {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateyY(0);
+  }
+}
+.contact__span {
+  color: #f13c20;
+  text-shadow: 1px 2px 3px black;
+}
+.contact__form {
+  width: 100%;
+  animation: cards 3s ease-out 1s both;
+  background-color: rgba(230, 230, 230, 0.2);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px black;
+  margin-bottom: 5rem;
+}
+.contact__form__div__btn {
+  margin-inline: auto;
+  width: 200px;
+}
+.contact__form__div__btn button {
+  margin-top: 1rem;
+  width: 10rem;
+  padding: 0.5rem;
+  background-color: #e6e6e6;
+  color: #111111;
+  border: none;
+  font-size: 1.2rem;
+  box-shadow: 2px 2px 10px black;
+}
+.contact__form__div__btn button:hover {
+  background-color: #161616;
+}
+@keyframes cards {
+  0% {
+    transform: translateX(-200vw);
+  }
+  100% {
+    transform: translateyX(0);
+  }
+}
+
+.form-label {
+  font-size: 1.2rem;
+  color: #e9e7e1;
+}
+
+.form-control {
+  border: none;
+  outline: none;
+  box-shadow: 2px 2px 10px black;
+}
+
+.form-control:focus {
+  border: none;
+  outline: none;
+}
+
+.footer__contact {
+  position: fixed;
+}
+
 body {
   font-family: "Ubuntu", Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -590,10 +732,6 @@ a {
 
 .main-about {
   height: 100vh;
-}
-
-.main-projects {
-  height: 100%;
 }
 
 main .social {
@@ -676,7 +814,7 @@ main .social i {
 
 footer {
   font-size: 1rem;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   right: 0;
   text-align: right;
