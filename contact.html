@@ -6,6 +6,8 @@
     <title>About | 1-Guy WebDev</title>
     <meta name="1-Guy WebDev" content="Front-End Webdeveloper, web designer">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://kit.fontawesome.com/21371eed37.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/jpg" sizes="32x32" href="img/1gwd-logo_clear_bg_500px.png">
     <link rel="stylesheet" href="css/main.css">
@@ -22,7 +24,7 @@
               Home
             </a>
           </li>
-          <li class="menu-nav__item active">
+          <li class="menu-nav__item">
             <a href="about.html" class="menu-nav__link">
               About Me
             </a>
@@ -32,7 +34,7 @@
               My Projects
             </a>
           </li>
-          <li class="menu-nav__item">
+          <li class="menu-nav__item active">
             <a href="contact.html" class="menu-nav__link">
               Contact Me
             </a>
@@ -41,7 +43,7 @@
       </nav>
     </header>
 
-    <main class="main-about">
+    <main class="main-contact">
       <section class="social">
         <a href="https://www.facebook.com/1guywebdev" target="_blank">Facebook
           <i class="fab fa-facebook fa-2x" title="Follow me on Facebook"></i>
@@ -54,14 +56,39 @@
         </a>
       </section>
       
-      <section class="contact"> 
-        
+      <section class="container-fluid contact"> 
+        <h1 class="contact__heading">Contact <span class="contact__span">Me</span></h1>
+        <form class="container form contact__form" action="">  
+          <div class="mb-1">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text"
+              class="form-control" name="Name:&nbsp;" id="name" aria-describedby="helpId" placeholder="Enter your name and/or surname..." required>
+          </div>
+          <div class="mb-1">
+            <label for="phone" class="form-label">Phone Number:</label>
+            <input type="text"
+              class="form-control" name="Phone:&nbsp;" id="phone" aria-describedby="helpId" placeholder="Enter your phone number..." required>
+          </div>
+          <div class="mb-1">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelpId" placeholder="Enter your email..." required>
+          </div> 
+          <div class="mb-1">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" name="message" id="meassage" rows="3" placeholder="Type your message here..."></textarea>
+          </div>
+          <div class="contact__form__div__btn">
+            <button type="submit" class="btn btn-primary contact__form__div__btn--btn">Submit</button>
+          </div>         
+        </form>
       </section>
     </main>
 
-    <footer>&copy;Copyright 2022
+    <footer class="footer__contact">&copy;Copyright 2022
       <img src="img/1gwd-logo_clear_bg_500px.png" width="32px" alt="">
     </footer>
     <script src="js/main.js" async defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
   </body>
 </html>
